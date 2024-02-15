@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #838f99;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-size: 28px;
+    color: #d0d4dd;
+    border: 3px solid #070707;
+    padding: .2em;
+    border-radius: 5px;
+    background-color: #015aff;
+    text-align: center;
+    margin-top: 0;
+}
+
+main {
+    width: 65%;
+    margin: auto;
+}
+
+.input-container {
+    margin: 0.5em 0;
+}
+
+input[type="number"] {
+    width: 5em;
+    padding: .2em;
+    text-align: center;
+    font-size: .8em;
+    border: none;
+    border-radius: 5px;
+}
+
+.button {
+    font-size: 1rem;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button.generate {
+    background-color: #18191a;
+    color: #fff;
+}
+
+.button.generate:hover {
+    background-color: #1f6af7;
+}
+
+.button.copy {
+    background-color: #0e76bb;
+    color: #000;
+}
+
+.button.copy:hover {
+    background-color: #a78f28;
+}
+
+#random-password-container {
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #f3f0f0;
+    padding: 1em;
+}
+
+#random-password {
+    background-color: #8b9799;
+    padding: 1em;
+    word-break: break-all;
+}
+
+#password-strength-container {
+    border: 2px solid gray;
+    border-radius: 5px;
+    background-color: #dfe4ea;
+    padding: 1em;
+}
+
+#password-test {
+    width: calc(100% - 24px);
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 0.5em;
+    outline: none;
+}
+
+#password-toggle {
+    font-size: .8em;
+    float: right;
+    position: relative;
+    top: 5px;
+    color: #70a1ff;
+    cursor: pointer;
+}
+
+#password-indicator {
+    width: calc(100% - 4px);
+    padding: 2px;
+    border-radius: 5px;
+    background: white;
+}
+
+#password-indicator.weak {
+    background: linear-gradient(to right, #ff0000 25%, #fff 25%);
+}
+
+#password-indicator.average {
+    background: linear-gradient(to right, #ff9900 50%, #fff 50%);
+}
+
+#password-indicator.good {
+    background: linear-gradient(to right, #70a1ff 75%, #fff 75%);
+}
+
+#password-indicator.strong {
+    background: linear-gradient(to right, #43f04c 100%, #43f04c 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Password Generator</title>
+    <meta name="description" content="A webpage that generates random passwords">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Random Password Generator</h1>
+    <main>
+        <div id="random-password-container">
+            <div id="error-message"></div>
+            <div class="input-container">
+                <label for="password-length">Length of password:</label>
+                <input type="number" id="password-length" value="8" min="4" max="256" step="1">
+            </div>
+            <div class="input-container">
+                <label for="repeat-characters">Repeat characters</label>
+                <input type="checkbox" id="repeat-characters" checked>
+            </div>
+            <div class="input-container">
+                <label for="special-characters">Use special characters</label>
+                <input type="checkbox" id="special-characters" checked>
+            </div>
+            <div class="input-container">
+                <label for="ambiguous-characters">Include ambiguous characters ("l, I, 1, 0, o")</label>
+                <input type="checkbox" id="ambiguous-characters" checked>
+            </div>
+            <div class="input-container">
+                <label for="include-numbers">Include numbers</label>
+                <input type="checkbox" id="include-numbers" checked>
+            </div>
+            <div class="input-container">
+                <label for="include-letters">Include letters</label>
+                <input type="checkbox" id="include-letters" checked>
+            </div>
+            <button class="generate button" onclick="generatePassword()">Generate password</button>
+            <div class="input-container">
+                Random password:
+                <div id="random-password"></div>
+            </div>
+            <button class="copy button" onclick="copyToClip()">Copy to Clipboard</button>
+        </div>
+        <div id="password-strength-container">
+            <div class="input-container">
+                <input type="password" id="password-test" placeholder="Type password here">
+                <span id="password-toggle" onclick="togglePasswordVisibility()">show</span>
+                <div id="password-indicator"></div>
+                <div id="password-strength-text">
+                    Password strength: <span id="password-strength"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
