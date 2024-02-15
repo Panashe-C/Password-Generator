@@ -125,8 +125,21 @@ input[type="number"] {
     background: linear-gradient(to right, #43f04c 100%, #43f04c 100%);
 }
 
+/* Media Queries */
+@media only screen and (max-width: 1024px) {
+    main {
+        width: 80%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     main {
-        width: 100%;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        width: 95%;
     }
 }
